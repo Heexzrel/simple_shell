@@ -8,7 +8,7 @@
  **/
 int builtins_list(data_of_program *data)
 {
-	int iterator;
+
 	builtins options[] = {
 		{"exit", builtin_exit},
 		{"help", builtin_help},
@@ -19,6 +19,7 @@ int builtins_list(data_of_program *data)
 		{"unsetenv", builtin_unset_env},
 		{NULL, NULL}
 	};
+	int iterator;
 
 /*walk through the structure*/
 	for (iterator = 0; options[iterator].builtin != NULL; iterator++)
