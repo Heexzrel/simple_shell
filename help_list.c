@@ -1,14 +1,15 @@
 #include "shell.h"
 
 /**
- * builtins_list - look for match and execute the associate builtin
- * @data: struct for the program's data
- * Return: Returns the return of the function executed is there is a match,
- * otherwise returns -1.
- **/
+builtins_list - searches for a match in the list of built-in commands
+and executes the associated function.
+@data: pointer to the program's data struct.
+Return: the return value of the executed function if there is a match,
+    otherwise returns -1.
+*/
 int builtins_list(data_of_program *data)
 {
-
+	int iterator;
 	builtins options[] = {
 		{"exit", builtin_exit},
 		{"help", builtin_help},
@@ -19,7 +20,6 @@ int builtins_list(data_of_program *data)
 		{"unsetenv", builtin_unset_env},
 		{NULL, NULL}
 	};
-	int iterator;
 
 /*walk through the structure*/
 	for (iterator = 0; options[iterator].builtin != NULL; iterator++)
