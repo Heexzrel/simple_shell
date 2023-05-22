@@ -22,8 +22,8 @@ int main(int argc, char *argv[], char *env[])
 		prompt = PROMPT_MSG;
 	}
 	errno = 0;
-	sisinfo(prompt, data);
-	return (0)
+	sisifo(prompt, data);
+	return (0);
 }
 
 /**

@@ -3,17 +3,18 @@
 /**
  * str_length - returns the length of a string.
  * @string: pointer to a string.
- * Return: length of the string.
+ * Return: Retturn the length of string
  */
 int str_length(char *string)
 {
 	int length = 0;
 
 	if (string == NULL)
-		return 0;
+		return (0);
 
 	while (string[length++] != '\0')
-
+	{
+	}
 	return (--length);
 }
 
@@ -140,19 +141,14 @@ char *str_concat(char *string1, char *string2)
  */
 void str_reverse(char *string)
 {
-	if (string == NULL)
-		return;
 
-	int length = str_length(string);
-	int i = 0;
-	int j = length - 1;
+	int i = 0, length = str_length(string) - 1;
+	char hold;
 
-	while (i < j)
+	while (i < length)
 	{
-		char temp = string[i];
-		string[i] = string[j];
-		string[j] = temp;
-		i++;
-		j--;
+		hold = string[i];
+		string[i++] = string[length];
+		string[length--] = hold;
 	}
 }
