@@ -34,12 +34,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 		}
 
 		history(input);
-		cmd = parse_cmd(input);
-		if (cmd == NULL) {
-           
-	            free(input);
-        	    continue;
-		}
 
 		/* Check if the command is "exit"*/
 		if (_strcmp(cmd[0], "exit") == 0)
