@@ -37,15 +37,14 @@ void read_file(char *filename, char **argv)
  * @argv:Program Name
  * Return : Excute A line void
  */
-char **parse_cmd(char *cmd)
-
+char **parse_cmd(char *cmd);
 void treat_file(char *line, int counter, FILE *fp, char **argv)
 {
 	char **cmd;
 	int st = 0;
 	cmd = parse_cmd(line);
 
-		if (_strncmp(cmd[0], "exit", 4) == 0)
+		if (_strncmp`:(cmd[0], "exit", 4) == 0)
 		{
 			exit_bul_for_file(cmd, line, fp);
 		}
