@@ -8,6 +8,8 @@
  */
 
 int main(__attribute__((unused)) int argc, char **argv)
+
+char **parse_cmd(char *cmd)
 {
 	char *input, **cmd;
 	int counter = 0, status = 1, st = 0;
@@ -34,7 +36,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 		}
 
 		history(input);
-
 		cmd = parse_cmd(input);
 
 		/* Check if the command is "exit"*/
