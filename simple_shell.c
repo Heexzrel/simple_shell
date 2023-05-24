@@ -53,31 +53,6 @@ int main(__attribute__((unused)) int argc, char **argv)
 }
 
 /**
- * parse_cmd - Parse the command line into individual arguments
- */
-char **parse_cmd(char *cmd)
-{
-    char **args = malloc(sizeof(char *) * MAX_ARGS);
-    if (args == NULL) {
-        return (NULL);
-    }
-
-    char *token;
-    int arg_count = 0;
-
-    token = strtok(cmd, " ");
-    while (token != NULL && arg_count < MAX_ARGS - 1) {
-        args[arg_count] = token;
-        arg_count++;
-        token = strtok(NULL, " ");
-    }
-    args[arg_count] = NULL;
-
-    return (args);
-}
-
-
-/**
  * check_builtin - Check if the command is a built-in command
  * @cmd: Command to check
  * Return: 0 on success, -1 on failure
