@@ -1,0 +1,33 @@
+#include "shell.h"
+
+/**
+ * parse_cmd - Parse Line of Input into Tokens
+ * @input: User input to parse
+ * Return: Array of strings (tokens) representing the parsed input
+ */
+char **parse_cmd(char *input)
+{
+	char **tokens;
+	char *token;
+	int i, bufferSize = BUFSIZE;
+
+	if (input == NULL)
+		return (NULL);
+
+	tokens = malloc(sizeof(char *) * bufferSize);
+	if (!tokens)
+	{
+		perror("hsh");
+		return (NULL);
+	}
+
+	token = _strtok(input, "\n ");
+	for (i = 0; token; i++)
+	{
+		tokens[i] = token;
+		token = _strtok(NULL, "\n ");
+	}
+	tokens[i] = NULL;
+
+	return (tokens);
+}
