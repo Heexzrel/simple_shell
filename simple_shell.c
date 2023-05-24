@@ -8,8 +8,6 @@
  */
 
 int main(__attribute__((unused)) int argc, char **argv)
-
-char **parse_cmd(char *cmd)
 {
 	char *input, **cmd;
 	int counter = 0, status = 1, st = 0;
