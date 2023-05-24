@@ -15,7 +15,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 	/* Read commands from a file if specified*/
 	if (argv[1] != NULL)
 		read_file(argv[1], argv);
-	signal(SIGINT, signal_to_handle);
+	signal(SIGINT, signal_to_handel);
 
 	while (status)
 	{
