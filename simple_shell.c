@@ -7,7 +7,7 @@
  * Return: Exit status
  */
 
-char **parse_cmd(char *cmd);
+char **parse_cmd(char *cmd)
 
 int main(__attribute__((unused)) int argc, char **argv)
 {
